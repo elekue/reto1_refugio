@@ -1,7 +1,7 @@
 
     <footer>
-        <p>&copy; 2025 Animalien Aterpetxea</p>
-        <p>1. erronkako azterketa - Jone Martinez</p>
+        <p>&copy; 2025 Refugio de animales</p>
+        <p>Exámen reto 1 - Nombre y apellidos</p>
     </footer>
 </body>
 </html>

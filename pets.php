@@ -21,7 +21,7 @@ $pets_adopted = $stmt->fetchAll();
 
     <div class="container">
         <div class="content">
-            <h2>ADOPTATZEKO DAUDEN MASKOTAK</h2>
+            <h2>MASCOTAS PARA ADOPTAR</h2>
             
             <?php if (count($pets) > 0): ?>
                 <div class="pets-grid">
@@ -40,13 +40,13 @@ $pets_adopted = $stmt->fetchAll();
                 </div>
             <?php else: ?>
                 <div class="info-message">
-                    Une honetan ez daukagu maskotarik adopziorako.
+                    No hay mascotas en adopción en este momento.
                 </div>
             <?php endif; ?>
         </div>
 
         <div class="content">
-            <h2>ADOPTATUTA DAUDEN MASKOTAK</h2>
+            <h2>MASCOTAS ADOPTADAS</h2>
             
             <?php if (count($pets_adopted) > 0): ?>
                 <div class="pets-grid">
@@ -65,7 +65,7 @@ $pets_adopted = $stmt->fetchAll();
                 </div>
             <?php else: ?>
                 <div class="info-message">
-                    Une honetan ez daukagu adoptatutako maskotarik.
+                    No hay mascotas adoptadas en éste momento.
                 </div>
             <?php endif; ?>
         </div>

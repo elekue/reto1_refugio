@@ -1,6 +1,6 @@
 <?php include 'header.php'; 
 
-// Estatistikak lortu
+// Estadísticas
 $petsByBreed = getPetsByBreed($conn);
 $adoptionPercentage = getAdoptionPercentage($conn);
 ?>
@@ -8,39 +8,39 @@ $adoptionPercentage = getAdoptionPercentage($conn);
 
     <div class="container">
         <div class="content">
-            <h2>Ongi etorri gure aterpetxera!</h2>
-            <p>Hemen aurkituko dituzu zure etxera eraman dezakezun maskota zoragarriak. Gure helburua animalia bakoitzari bigarren aukera bat ematea eta familia maitakorrekin elkartzea da.</p>
+            <h2>Bienvenid@ a nuestro refugio!!!</h2>
+            <p>Aquí encontrarás mascotas que puedes llevar a tu casa. Nuestro objetivo es dar una segunda oportunidad a cada animal y reunirlos con familias adecuadas</p>
         </div>
 
         <div class="stats-container">
             
             <!-- Arrazen maskota kopurua -->
             <div class="stat-box">
-                <h3>Arrazak eta maskota kopurua</h3>
+                <h3>Razas y total mascotas</h3>
                 <?php 
                 if (!empty($petsByBreed)) {
                     foreach ($petsByBreed as $breed => $count) {
                         echo '<div class="stat-item">';
-                        echo htmlspecialchars($breed) . ': <strong>' . $count . ' maskota</strong>';
+                        echo htmlspecialchars($breed) . ': <strong>' . $count . ' mascota(s)</strong>';
                         echo '</div>';
                     }
                 } else {
-                    echo '<p>Ez dago daturik eskuragarri.</p>';
+                    echo '<p>No hay datos disponibles.</p>';
                 }
                 ?>
             </div>
 
             <!-- Adopzio ehunekoa -->
             <div class="stat-box">
-                <h3>Adopzio egoera</h3>
+                <h3>Estado de adopción</h3>
                 <div class="stat-item">
-                    <strong>Adoptatuak:</strong> 
-                    <span class="percentage"><?php echo $adoptionPercentage['adoptatuak']; ?>%</span>
+                    <strong>Adoptados:</strong> 
+                    <span class="percentage"><?php echo $adoptionPercentage['adoptados']; ?>%</span>
                 </div>
                 <div class="stat-item">
-                    <strong>Adopziorako eskuragarri:</strong> 
+                    <strong>Disponible para adopción:</strong> 
                     <span class="percentage" style="color: #3498db;">
-                        <?php echo $adoptionPercentage['eskuragarri']; ?>%
+                        <?php echo $adoptionPercentage['disponibles']; ?>%
                     </span>
                 </div>
             </div>
